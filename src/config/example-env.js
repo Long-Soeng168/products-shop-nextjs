@@ -1,8 +1,9 @@
-const BASE_BACKEND_URL = "https://admin.scholarkh.com";
-const APP_URL = "https://www.scholarkh.com/";
+const BASE_BACKEND_URL = "https://admin-ecommerce.brolong.pro";
+const APP_URL = "https://ecommerce.brolong.pro/";
 
-const IS_SHOW_KID_BOOKS = true;
+const IS_SHOW_KID_BOOKS = false;
 const EXCHANGE_RATE = 4100;
+const PRODUCT_CARD_RATIO = '[1/1]';
 const BASE_API_URL = BASE_BACKEND_URL + "/api";
 const IMAGE_BOOK_URL = BASE_BACKEND_URL + "/assets/images/isbn/";
 const IMAGE_BLOG_URL = BASE_BACKEND_URL + "/assets/images/news/";
@@ -20,6 +21,7 @@ export {
   IMAGE_CATE_URL,
   IS_SHOW_KID_BOOKS,
   EXCHANGE_RATE,
+  PRODUCT_CARD_RATIO,
   APP_URL,
   IMAGE_BLOG_URL,
   BOOK_PDF_URL,
