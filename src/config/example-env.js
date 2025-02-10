@@ -1,5 +1,5 @@
-const BASE_BACKEND_URL = "https://admin-ecommerce.brolong.pro";
-const APP_URL = "https://helejance.com/";
+const BASE_BACKEND_URL = "https://demo-admin-ecommerce.brolong.pro";
+const APP_URL = "https://ecommerce.brolong.pro/";
 
 const IS_SHOW_KID_BOOKS = false;
 const EXCHANGE_RATE = 4100;
