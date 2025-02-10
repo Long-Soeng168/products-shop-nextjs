@@ -16,6 +16,9 @@ const nextConfig = {
         hostname: "admin-ecommerce.brolong.pro",
       },
       {
+        hostname: "demo-admin-ecommerce.brolong.pro",
+      },
+      {
         hostname: "127.0.0.1",
       },
     ],
