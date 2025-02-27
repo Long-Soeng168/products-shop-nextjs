@@ -3,14 +3,13 @@ import { getAbout } from "@/services/page-services";
 import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
 
-
 export async function generateMetadata() {
   let about = await getAbout();
   return {
-    title: 'About Us',
+    title: "About Us",
     description: about.description,
     openGraph: {
-      title: 'About Us',
+      title: "About Us",
       description: about.description,
     },
   };
@@ -22,7 +21,7 @@ const AboutPage = async () => {
   const locale = await getLocale();
 
   return (
-    <div className="flex flex-col items-center min-h-screen mt-8 mb-8">
+    <div className="flex flex-col items-center min-h-screen px-4 mt-8 mb-8">
       <ScrollToTop />
 
       {about?.description ? (

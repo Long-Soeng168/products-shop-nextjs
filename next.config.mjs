@@ -13,7 +13,10 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "admin-ecommerce.brolong.pro",
+        hostname: "admin-zeela.brolong.pro",
+      },
+      {
+        hostname: "images.unsplash.com",
       },
       {
         hostname: "demo-admin-ecommerce.brolong.pro",

@@ -47,7 +47,7 @@ const Page = async (props) => {
   const publisherId = searchParams?.publisherId || "";
 
   return (
-    <div className="flex">
+    <div className="flex px-4">
       <ScrollToTop
         key={
           " " +
@@ -154,7 +154,8 @@ const Page = async (props) => {
         {/* End books Header */}
 
         {/* Start All Filter Query */}
-        <MyFilterQueries key={
+        <MyFilterQueries
+          key={
             "filter-queries-key" +
             search +
             currentPage +
@@ -169,7 +170,8 @@ const Page = async (props) => {
             yearTo +
             brandId +
             publisherId
-          } />
+          }
+        />
         {/* End All Filter Query */}
 
         {/* Start books List */}
@@ -219,10 +221,7 @@ const Page = async (props) => {
           key={"categories-components" + categoryId + subCategoryId}
           categories={categories}
         />
-        <Suspense
-          key={brandId + publisherId}
-          fallback={<MyLoadingAnimation />}
-        >
+        <Suspense key={brandId + publisherId} fallback={<MyLoadingAnimation />}>
           <MySelectFilter />
         </Suspense>
         {/* Price */}

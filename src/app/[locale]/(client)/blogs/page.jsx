@@ -19,7 +19,7 @@ const Page = async (props) => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 my-8 mt-4">
+      <div className="flex flex-col gap-4 px-4 my-8 mt-4">
         <ScrollToTop />
 
         {/* <MyHeading

@@ -72,7 +72,7 @@ const ProductPage = async ({ params }) => {
   getBook();
 
   return (
-    <div className="lg:flex">
+    <div className="px-4 lg:flex">
       <ScrollToTop />
       <div className="w-full lg:flex-1">
         <div className="grid w-full grid-cols-12 gap-2 mx-auto mt-8">

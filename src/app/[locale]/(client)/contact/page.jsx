@@ -9,10 +9,10 @@ import ContactForm from "@/components/contact-form";
 export async function generateMetadata() {
   let contact = await getContact();
   return {
-    title: 'Contact Us',
+    title: "Contact Us",
     description: contact.description,
     openGraph: {
-      title: 'Contact Us',
+      title: "Contact Us",
       description: contact.description,
     },
   };
@@ -22,7 +22,7 @@ const ContactPage = async () => {
   let contact = await getContact();
   const t = await getTranslations("Index");
   return (
-    <div className="grid gap-12 my-8 lg:grid-cols-2">
+    <div className="grid gap-12 px-4 my-8 lg:grid-cols-2">
       <ScrollToTop />
 
       {/* Company Contact Information */}

@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 import ScrollToTop from "@/components/scroll-to-top";
 
 const CartPage = () => {
-  const t = useTranslations('Index');
+  const t = useTranslations("Index");
   const { cartItems, removeFromCart, clearCart, handleQuantityChange } =
     useCart();
   const [isClient, setIsClient] = useState(false); // Track if it's client-side
@@ -39,28 +39,38 @@ const CartPage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen mb-8 lg:px-4">
+    <div className="flex flex-col min-h-screen px-4 mb-8 lg:px-4">
       <ScrollToTop />
 
       <MyStepper currentStep={1} />
       <main className="flex-1 grid grid-cols-1 lg:grid-cols-[4fr_2fr] gap-8 ">
         <div className="p-2 py-4 border rounded-lg shadow-lg lg:p-8 bg-background">
           <div>
-            <h1 className="mb-4 text-2xl font-bold">
-              {t('shoppingCart')}
-            </h1>
+            <h1 className="mb-4 text-2xl font-bold">{t("shoppingCart")}</h1>
             <div className="overflow-x-auto border border-border">
               <ScrollArea className="max-h-[100vh]">
                 <table className="min-w-full bg-background">
                   <thead>
                     <tr className="bg-primary/10 dark:bg-border">
                       <th className="p-4 font-normal text-left ">No</th>
-                      <th className="p-4 font-normal text-center ">{t('image')}</th>
-                      <th className="p-4 font-normal text-left ">{t('title')}</th>
-                      <th className="p-4 font-normal text-left ">{t('price')}</th>
-                      <th className="p-4 font-normal text-left ">{t('quantity')}</th>
-                      <th className="p-4 font-normal text-left ">{t('subTotal')}</th>
-                      <th className="p-4 font-normal text-center ">{t('action')}</th>
+                      <th className="p-4 font-normal text-center ">
+                        {t("image")}
+                      </th>
+                      <th className="p-4 font-normal text-left ">
+                        {t("title")}
+                      </th>
+                      <th className="p-4 font-normal text-left ">
+                        {t("price")}
+                      </th>
+                      <th className="p-4 font-normal text-left ">
+                        {t("quantity")}
+                      </th>
+                      <th className="p-4 font-normal text-left ">
+                        {t("subTotal")}
+                      </th>
+                      <th className="p-4 font-normal text-center ">
+                        {t("action")}
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -150,22 +160,20 @@ const CartPage = () => {
               </ScrollArea>
             </div>
             <h2 className="p-4 text-2xl font-bold border-b border-l border-r text-end">
-              {t('total')}: ${getTotalPrice()}
+              {t("total")}: ${getTotalPrice()}
             </h2>
 
             {cartItems.length > 0 ? (
               <div className="flex justify-between mt-4">
                 <Button onClick={clearCart} variant="destructive">
-                  <X /> {t('clearCart')}
+                  <X /> {t("clearCart")}
                 </Button>
                 <Button>
-                  <Link href="/cart/checkout">{t('checkout')}</Link>
+                  <Link href="/cart/checkout">{t("checkout")}</Link>
                 </Button>
               </div>
             ) : (
-              <p className="mt-8 text-center text-gray-500">
-                {t('noData')}...
-              </p>
+              <p className="mt-8 text-center text-gray-500">{t("noData")}...</p>
             )}
           </div>
         </div>

@@ -7,7 +7,7 @@ import MyKidsSearch from "@/components/ui/my-kids-search";
 import ScrollToTop from "@/components/scroll-to-top";
 
 const Page = async (props) => {
-  const t = await getTranslations('Index');
+  const t = await getTranslations("Index");
   const searchParams = await props.searchParams;
   const search = searchParams?.search || "";
   const currentPage = searchParams?.page || "1";
@@ -24,13 +24,13 @@ const Page = async (props) => {
   const publisherId = searchParams?.publisherId || "";
 
   return (
-    <div className="flex">
-      <ScrollToTop key={' ' + currentPage} />
+    <div className="flex px-4">
+      <ScrollToTop key={" " + currentPage} />
 
       <div className="flex-1 p-4 pt-4 space-y-2">
         {/* Start books Header */}
         <div className="w-full">
-          <MyKidsSearch placeholder={t('searchBooks')} />
+          <MyKidsSearch placeholder={t("searchBooks")} />
         </div>
         {/* End books Header */}
 

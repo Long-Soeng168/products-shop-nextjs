@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 import ScrollToTop from "@/components/scroll-to-top";
 import Image from "next/image";
-import { useParams } from 'next/navigation'
+import { useParams } from "next/navigation";
 
 const profiles = [
   {
@@ -80,9 +80,9 @@ const profiles = [
 ];
 
 const Page = () => {
-    const params = useParams() 
+  const params = useParams();
   return (
-    <div className="p-4">
+    <div className="p-4 px-4">
       <ScrollToTop />
 
       <h2 className="mb-4 text-2xl font-bold uppercase">{params.slug}</h2>

@@ -11,15 +11,13 @@ const ClientLayout = ({ children }) => {
     <>
       <CartProvider>
         <div className="bg-primary dark:bg-background">
-          <div className="max-w-screen-xl px-2 mx-auto">
+          <div className="max-w-screen-xl px-4 mx-auto">
             <Suspense fallback={<MyLoadingAnimation />}>
               <MyHeader key="home-header" />
             </Suspense>
           </div>
         </div>
-        <main className="min-h-[55vh] px-2 mx-auto max-w-screen-xl">
-          {children}
-        </main>
+        <main className="min-h-[55vh] mx-auto max-w-screen-xl">{children}</main>
         <ToTopButton />
         <TelegramButton />
         <MyFooter />

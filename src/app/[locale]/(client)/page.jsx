@@ -7,14 +7,22 @@ import Promotion from "@/components/homepage/promotion";
 import Blogs from "@/components/homepage/blogs";
 import { APP_URL } from "@/config/env";
 import ScrollToTop from "@/components/scroll-to-top";
-import { APP_DESCRIPTION, APP_KEYWORD, APP_LOGO, APP_TITLE } from "@/config/website-detail";
+import {
+  APP_DESCRIPTION,
+  APP_KEYWORD,
+  APP_LOGO,
+  APP_TITLE,
+} from "@/config/website-detail";
 import InstallPWAButton from "@/components/InstallPWAButton";
 import { Toaster } from "@/components/ui/toaster";
+import MyEndlestScroll from "@/components/my-endless-scroll";
+import MyEndlessScrollBrands from "@/components/my-endless-scroll-brands";
+import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 
 export const metadata = {
-  title: APP_TITLE ,
-  description: APP_DESCRIPTION ,
-  keywords: APP_KEYWORD ,
+  title: APP_TITLE,
+  description: APP_DESCRIPTION,
+  keywords: APP_KEYWORD,
   openGraph: {
     title: APP_TITLE,
     description: APP_DESCRIPTION,
@@ -31,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: APP_LOGO,
-    title: APP_TITLE ,
+    title: APP_TITLE,
     description: APP_DESCRIPTION,
   },
 };
@@ -41,24 +49,29 @@ export default function Home() {
     <div>
       <ScrollToTop />
 
-      <MySlideShow className="mt-2 mb-8" />
+      <MySlideShow className="px-4 mt-2 mb-8" />
 
-      <MyCategoryList key="category-list-key" className="mb-8" />
+      <MyCategoryList key="category-list-key" className="px-4" />
 
-      <NewArrivals />
+      <MyEndlessScrollBrands />
 
-      <BestSellings />
+      <div className="px-4">
+        <NewArrivals />
 
-      <Promotion />
+        <BestSellings />
 
-      {/* <div className="max-w-screen-xl mx-auto mb-20 space-y-4">
-        <MyHeading title="Partners" />
-        <MyPartnerList />
-      </div> */}
+        <Promotion />
 
-      <Blogs />
+        {/* <div className="max-w-screen-xl mx-auto mb-20 space-y-4">
+  <MyHeading title="Partners" />
+  <MyPartnerList />
+</div> */}
 
-      <MyFeatureList className="my-16" />
+        <Blogs />
+
+        <MyFeatureList className="my-16" />
+      </div>
+      {/* <MyEndlestScroll /> */}
       <Toaster />
     </div>
   );
