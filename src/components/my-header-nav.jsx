@@ -248,7 +248,7 @@ export function MyHeaderNav({ categories, categoryMostBook }) {
         <NavigationMenuItem
           className={`${pathName == "/" && "underline underline-offset-4"}`}
         >
-          <Link href="/home" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {t("home")}
             </NavigationMenuLink>
