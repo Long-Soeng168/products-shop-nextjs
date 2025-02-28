@@ -24,6 +24,9 @@ const nextConfig = {
       {
         hostname: "127.0.0.1",
       },
+      {
+        hostname: "admin.helejance.com",
+      },
     ],
   },
 };

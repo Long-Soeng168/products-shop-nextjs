@@ -15,7 +15,12 @@ import MyHomeModal from "./my-home-modal";
 import { User2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { BASE_BACKEND_URL } from "@/config/env";
-import { APP_LOGO, APP_NAME, APP_NAME_KH } from "@/config/website-detail";
+import {
+  APP_CONTACT,
+  APP_LOGO,
+  APP_NAME,
+  APP_NAME_KH,
+} from "@/config/website-detail";
 
 const MyHeader = async () => {
   const resultCateogries = await getCategories({
@@ -31,14 +36,17 @@ const MyHeader = async () => {
       <header className="flex flex-wrap py-4 lg:gap-10 lg:items-center">
         {/* Start Logo */}
         <div className="flex items-center justify-between w-full gap-2 mb-4 lg:mb-0 lg:w-auto">
-          <Link href="/" className="flex items-center gap-2 overflow-hidden">
-            <Image
-              className="object-contain"
-              src={APP_LOGO}
-              width={66}
-              height={66}
-              alt="Logo Image"
-            />
+          <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 overflow-hidden">
+              <Image
+                className="object-contain"
+                src={APP_LOGO}
+                width={66}
+                height={66}
+                alt="Logo Image"
+              />
+            </Link>
+
             <div>
               <p className="text-base font-bold max-w-26 text-primary-foreground dark:text-white">
                 {APP_NAME_KH}
@@ -46,8 +54,11 @@ const MyHeader = async () => {
               <p className="text-sm font-semibold max-w-26 text-primary-foreground dark:text-white">
                 {APP_NAME}
               </p>
+              <p className="text-sm font-semibold max-w-26 text-primary-foreground dark:text-white">
+                Tel : {APP_CONTACT}
+              </p>
             </div>
-          </Link>
+          </div>
           <div className="flex items-center gap-2 lg:hidden">
             <ModeToggle />
             <LanguageToggle />
