@@ -113,6 +113,13 @@ const ProductPage = async ({ params }) => {
                     </Link>
                   </MyKeyValueCard>
                 )}
+                {product?.code && (
+                  <MyKeyValueCard title={`Code`}>
+                    <span className="hover:underline underline-offset-4 text-primary">
+                      {product?.code}
+                    </span>
+                  </MyKeyValueCard>
+                )}
 
                 {product?.category && (
                   <MyKeyValueCard title={t("category")}>
