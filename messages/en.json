@@ -10,7 +10,6 @@
         "newsDescription": "We are a rapidly growing community of members from various libraries in Cambodia, united as one digital library community.",
         "contact": "Contact",
         "about": "About",
-
         "cart": "Cart",
         "shoppingCart": "Shopping Cart",
         "image": "Image",
@@ -29,7 +28,6 @@
         "yourOrderHasBeenSuccessfullyPlaced": "Your order has been successfully placed.",
         "weWillGetBackToYouAsSoonAsPossible": "We will get back to you as soon as possible.",
         "returnToHomepage": "Return to Homepage",
-
         "category": "Category",
         "subCategory": "Sub Category",
         "search": "Search",
@@ -39,11 +37,9 @@
         "selectCategory": "Select Category",
         "all": "All",
         "allCategories": "All Categories",
-        
         "sortBy": "Sort By",
         "sortDirection": "Sort Direction",
         "perPage": "Per Page",
-        
         "success": "Success",
         "khmer": "Khmer",
         "english": "English",
@@ -66,12 +62,10 @@
         "publishedYear": "Released Year",
         "year": "Year",
         "menu": "Menu",
-
         "applyFilter": "Apply Filter",
         "filter": "Filter",
         "buyNow": "Buy Now",
         "addToCart": "Add to Cart",
-
         "from": "From",
         "to": "to",
         "of": "of",
@@ -79,23 +73,19 @@
         "results": "Results",
         "previous": "previous",
         "next": "Next",
-        
         "socialMedia": "Social Media",
         "noData": "No Data...",
         "contactInformation": "Contact Information",
         "sendUsAMessage": "Send Us a Message",
         "ourLocation": "Our Location",
-
-        "name": "Name",
+        "name": "Your Name",
         "email": "Email",
         "phone": "Phone",
         "message": "Message",
         "sendMessage": "Send Message",
-        
         "dark": "Dark",
         "light": "Light",
         "system": "System",
-
         "seeMore": "See More",
         "showMore": "Show More",
         "showLess": "Show Less",
@@ -103,7 +93,6 @@
         "readMore": "Read More",
         "bestSelling": "Best Selling",
         "newArrivals": "New Arrivals",
-
         "kidBooks": "Kid Books",
         "totalView": "Total View",
         "fromYear": "From Year",

@@ -17,6 +17,7 @@ import MyReadPdfButton from "@/components/my-read-pdf-button";
 import { EyeIcon } from "lucide-react";
 import MyProductDetailBanner from "@/components/my-product-detail-banner";
 import { getSlides } from "@/services/slides-services";
+import MySocialLinkProductDetail from "@/components/my-social-link-product-detail";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -77,8 +78,13 @@ const ProductPage = async ({ params }) => {
       <div className="w-full lg:flex-1">
         <div className="grid w-full grid-cols-12 gap-2 mx-auto mt-8">
           <div className="col-span-12 mx-6 mb-6 md:ml-0 md:col-span-4 md:px-0">
-            <div className="pb-4 ">
+            <div className="relative pb-4">
               <MyGallery title={product?.title} images={[image, ...images]} />
+              {!product.is_pre_order && (
+                <span className="absolute top-0 left-0 px-2 py-1 text-sm font-semibold text-white rounded-tl-sm rounded-br-sm bg-yellow-500/80">
+                  Pre Order
+                </span>
+              )}
             </div>
             {product?.file && <MyReadPdfButton product={product} />}
           </div>
@@ -103,6 +109,7 @@ const ProductPage = async ({ params }) => {
                     </Link>
                   </MyKeyValueCard>
                 )}
+
                 {product?.publisher && (
                   <MyKeyValueCard title={t("publisher")}>
                     <Link
@@ -217,7 +224,12 @@ const ProductPage = async ({ params }) => {
             </div>
             {product?.price > 0 && (
               <div className="my-4">
-                {product?.discount != 0 ? (
+                {product.is_pre_order && (
+                  <span className="inline-block px-2 py-1 text-sm font-semibold text-white bg-yellow-500 rounded-tl-sm rounded-br-sm">
+                    Pre Order
+                  </span>
+                )}
+                {product?.discount != 0 && product.discount != null ? (
                   <p className="space-x-4 text-2xl font-semibold text-gray-400 dark:text-white">
                     <span className="line-through">{product?.price} $</span>
                     <span className="text-red-500">
@@ -240,6 +252,10 @@ const ProductPage = async ({ params }) => {
                 <MyAddToCart product={product} />
               </div>
             )}
+
+            <div>
+              <MySocialLinkProductDetail />
+            </div>
 
             {product?.short_description && (
               <div className="allow-copy">

@@ -27,7 +27,9 @@ const ProductCard = ({ product, endpoint = "/products" }) => {
                 alt={product.title}
               />
             ) : (
-              <div className={`flex items-center justify-center w-full border rounded-sm bg-secondary aspect-${PRODUCT_CARD_RATIO}`}>
+              <div
+                className={`flex items-center justify-center w-full border rounded-sm bg-secondary aspect-${PRODUCT_CARD_RATIO}`}
+              >
                 <ImageIcon size={72} className="text-border" />
               </div>
             )}
@@ -35,6 +37,11 @@ const ProductCard = ({ product, endpoint = "/products" }) => {
           {product.discount != 0 && product.discount != null && (
             <span className="absolute px-1.5 font-bold text-lg rounded-sm text-white bottom-1.5 left-1.5 bg-real_primary/80">
               - {product.discount}%
+            </span>
+          )}
+          {product.is_pre_order && (
+            <span className="absolute top-0 left-0 px-2 py-1 text-sm font-semibold text-white rounded-tl-sm rounded-br-sm bg-yellow-500/80">
+              Pre Order
             </span>
           )}
           <MyAddToCartMini product={product} />
@@ -70,9 +77,9 @@ const ProductCard = ({ product, endpoint = "/products" }) => {
                 <h3 className="text-md text-start text-foreground line-clamp-2">
                   {product.title}
                 </h3>
-                <h3 className="text-gray-400 text-md text-start line-clamp-2">
+                {/* <h3 className="text-gray-400 text-md text-start line-clamp-2">
                   {product.short_description}
-                </h3>
+                </h3> */}
               </TooltipTrigger>
               <TooltipContent
                 side="bottom"

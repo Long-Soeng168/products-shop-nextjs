@@ -88,10 +88,10 @@ const MyFooter = async () => {
         <p>
           {locale == "kh" ? "ដោយ" : "By"} :{" "}
           <a
-            href="https://alphalib.org/"
+            href="https://www.corasolution.com/"
             className="font-semibold hover:underline"
           >
-            Alphalib
+            Cora Soft
           </a>
           <span className="mx-4">|</span>
           {locale == "kh" ? footer?.copyright_kh : footer?.copyright}{" "}

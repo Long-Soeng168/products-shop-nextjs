@@ -1,4 +1,8 @@
-import { IMAGE_BOOK_URL, IMAGE_CATE_URL, PRODUCT_CARD_RATIO } from "@/config/env";
+import {
+  IMAGE_BOOK_URL,
+  IMAGE_CATE_URL,
+  PRODUCT_CARD_RATIO,
+} from "@/config/env";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -139,12 +143,14 @@ const MyCategoryPanel = ({ categoriesData }) => {
                                 alt={book.title}
                               />
                             ) : (
-                              <div className={`flex items-center justify-center w-full border rounded-sm bg-secondary aspect-${PRODUCT_CARD_RATIO}`}>
+                              <div
+                                className={`flex items-center justify-center w-full border rounded-sm bg-secondary aspect-${PRODUCT_CARD_RATIO}`}
+                              >
                                 <ImageIcon size={50} className="text-border" />
                               </div>
                             )}
                           </Link>
-                          {book.discount != 0 && (
+                          {book.discount != 0 && book.discount != null && (
                             <span className="absolute px-1.5 font-bold text-xs rounded-sm text-white bottom-1.5 left-1.5 bg-real_primary/80">
                               - {book.discount}%
                             </span>
@@ -154,7 +160,7 @@ const MyCategoryPanel = ({ categoriesData }) => {
                           href={`/products/${book.id}?productTitle=${book.title}`}
                         >
                           <div className="flex flex-col justify-between mt-1 lg:items-center lg:flex-row">
-                            {book.discount != 0 ? (
+                            {book.discount != 0 && book.discount != null ? (
                               <p className="space-x-2 overflow-hidden text-xs text-gray-400 text-ellipsis">
                                 <span className="line-through">
                                   {book.price} $
