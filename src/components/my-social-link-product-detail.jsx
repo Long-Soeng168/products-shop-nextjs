@@ -12,7 +12,7 @@ const MySocialLinkProductDetail = async () => {
   const footer = await getFooter();
   const links = await getLinks(1);
   return (
-    <div className="w-full pt-4 border-t">
+    <div className="w-full py-4 border-t">
       {links?.length > 0 && (
         <ul className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {links?.map((item) => (
