@@ -80,7 +80,7 @@ const ProductPage = async ({ params }) => {
           <div className="col-span-12 mx-6 mb-6 md:ml-0 md:col-span-4 md:px-0">
             <div className="relative pb-4">
               <MyGallery title={product?.title} images={[image, ...images]} />
-              {!product.is_pre_order && (
+              {!product.is_pre_order == 1 && (
                 <span className="absolute top-0 left-0 px-2 py-1 text-sm font-semibold text-white rounded-tl-sm rounded-br-sm bg-yellow-500/80">
                   Pre Order
                 </span>
@@ -224,7 +224,7 @@ const ProductPage = async ({ params }) => {
             </div>
             {product?.price > 0 && (
               <div className="my-4">
-                {product.is_pre_order && (
+                {product.is_pre_order == 1 && (
                   <span className="inline-block px-2 py-1 text-sm font-semibold text-white bg-yellow-500 rounded-tl-sm rounded-br-sm">
                     Pre Order
                   </span>
