@@ -36,7 +36,7 @@ const MySlideShowTop = ({ className, topSlides }) => {
                     }`}
                     width={1050}
                     height={300}
-                    src={IMAGE_SLIDE_URL + slide.image}
+                    src={IMAGE_SLIDE_URL + "thumb/" + slide.image}
                     alt={slide.name}
                   />
                 </Link>

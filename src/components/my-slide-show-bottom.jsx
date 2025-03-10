@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import {
   Carousel,
@@ -40,7 +40,7 @@ const MySlideShowBottom = ({ className, bottomSlides }) => {
                     }`}
                     width={1050}
                     height={300}
-                    src={IMAGE_SLIDE_URL + slide.image}
+                    src={IMAGE_SLIDE_URL + "thumb/" + slide.image}
                     alt={slide.name}
                   />
                 </Link>
