@@ -28,6 +28,7 @@ const nextConfig = {
         hostname: "admin.helejance.com",
       },
     ],
+    unoptimized: true,
   },
 };
 

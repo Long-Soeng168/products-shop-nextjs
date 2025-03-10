@@ -2,7 +2,6 @@ import MyGallery from "@/components/my-gallery";
 import MyKeyValueCard from "@/components/ui/my-key-value-card";
 import { getBook } from "@/services/books-services";
 import MyShowMoreText from "@/components/ui/my-show-more-text";
-import moment from "moment";
 import Link from "next/link";
 import { Suspense } from "react";
 import MyLoadingAnimation from "@/components/ui/my-loading-animation";
