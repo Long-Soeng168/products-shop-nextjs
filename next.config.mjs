@@ -27,6 +27,9 @@ const nextConfig = {
       {
         hostname: "admin.helejance.com",
       },
+      {
+        hostname: "admin.zeelastore.com",
+      },
     ],
     unoptimized: true,
   },
