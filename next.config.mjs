@@ -31,7 +31,7 @@ const nextConfig = {
         hostname: "admin.zeelastore.com",
       },
     ],
-    unoptimized: true,
+    // unoptimized: true,
   },
 };
 
