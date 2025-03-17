@@ -1,15 +1,15 @@
 import { BASE_API_URL } from "@/config/env";
 
 export async function getwebinfo() {
-  const url = BASE_API_URL + `/footer`;
+  const url = BASE_API_URL + `/webinfo`;
   try {
     const response = await fetch(url, {
       next: {
-        revalidate: 3600,
+        revalidate: 360,
       },
     });
     if (!response.ok) {
-      throw new Error(`Failed to fetch Footer : ${response.statusText}`);
+      throw new Error(`Failed to fetch webinfo : ${response.statusText}`);
     }
     return await response.json();
   } catch (error) {

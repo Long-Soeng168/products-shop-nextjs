@@ -21,6 +21,7 @@ import {
   APP_NAME,
   APP_NAME_KH,
 } from "@/config/website-detail";
+import { getwebinfo } from "@/services/webinfo-services";
 
 const MyHeader = async () => {
   const resultCateogries = await getCategories({
@@ -28,6 +29,8 @@ const MyHeader = async () => {
     orderDir: "desc",
     withSub: 1,
   });
+  const resultWebInfo = await getwebinfo();
+  // console.log(resultWebInfo);
 
   const categoryMostBooks = await getCategoryHasMostBooks();
   const t = await getTranslations("Index");
@@ -48,14 +51,15 @@ const MyHeader = async () => {
             </Link>
 
             <div>
-              <p className="text-base font-bold max-w-26 text-primary-foreground dark:text-white">
+              {/* <p className="text-base font-bold max-w-26 text-primary-foreground dark:text-white">
                 {APP_NAME_KH}
+              </p> */}
+              <p className="text-sm font-semibold max-w-26 text-primary-foreground dark:text-white">
+                {/* {APP_NAME} */}
+                {resultWebInfo?.about.name_kh}
               </p>
               <p className="text-sm font-semibold max-w-26 text-primary-foreground dark:text-white">
-                {APP_NAME}
-              </p>
-              <p className="text-sm font-semibold max-w-26 text-primary-foreground dark:text-white">
-                Tel : {APP_CONTACT}
+                Tel : {resultWebInfo?.contact?.phone}
               </p>
             </div>
           </div>

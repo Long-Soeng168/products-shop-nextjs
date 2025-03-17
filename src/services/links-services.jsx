@@ -6,7 +6,7 @@ export async function getLinks(forProductDetail = 0) {
   try {
     const response = await fetch(url, {
       next: {
-        revalidate: 3600,
+        revalidate: 360,
       },
     });
     if (!response.ok) {
